@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheCodevia | Creative Developer</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+
+
+<body>
+    <div id="preloader">
+        <div class="loader-content">
+            <img src="Logo.png" alt="Logo" class="preloader-logo">
+            <span class="preloader-text">Welcome!</span>
+        </div>
+    </div>
+
+    <!-- Preload sound -->
+    <audio id="preload-sound" src="sound.mp3" preload="auto"></audio>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="bg-grid"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Logo.png" alt="Adrian_A Logo" class="logo-img">
+                Adrian_A
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#competencies">Competencies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>
+                I'm Adrian Alasco<br>
+                <span class="gradient-text"><span id="typing"></span><span class="typing-cursor"></span></span>
+            </h1>
+
+            <p>
+                I'm a tireless seeker of knowledge, an occasional purveyor of wisdom, and also,
+                coincidentally, excellent
+                customer service and a technical support specialist. Delivering exceptional customer experiences for 8+
+                years across multiple channels
+                with 95%+ CSAT ratings.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn primary">Download CV</a>
+                <a href="#contact" class="btn ghost">Follow</a>
+            </div>
+
+            <div class="socials">
+                <a href="https://wa.me/639634570219" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/adriand_alasco/" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/adriand.alasco/" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/adrian-alasco/" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <div class="image-wrapper">
+                <div class="image-border"></div>
+                <div class="image-glow"></div>
+                <img src="Profile picture image.png" alt="Profile Photo">
+
+
+
+
+                <div class="floating-badge badge-1">
+                    <div class="badge-icon"></div>
+                    Available for work
+                </div>
+                <div class="floating-badge badge-2">
+                    Technical Support & Customer Service Specialist
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about reveal" id="about">
+        <h2>About Me</h2>
+        <p>
+            Detail-oriented and empathetic Customer Support Specialist with 8+ years of experience delivering top-tier
+            support via chat, voice, and email. Proven success in fast-paced environments, excelling at CRM usage, issue
+            resolution, onboarding, and mentoring.
+        </p>
+        <p>
+            Adept at using data insights to improve workflows and customer satisfaction. Passionate about creating
+            exceptional customer experiences and continuously improving service processes.
+        </p>
+    </section>
+
+    <!-- Core Competencies Section -->
+    <section id="competencies" class="competencies reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">"What I Excel At"</span>
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="competencies-grid">
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Support Excellence</h3>
+                    <p>95%+ CSAT ratings across voice, chat, and email support channels</p>
+                    <div class="competency-badge">Voice • Chat • Email</div>
+                </div>
+
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Multichannel Communication</h3>
+                    <p>Expertise in handling customer inquiries across phone, chat, and email with consistent quality
+                    </p>
+                    <div class="competency-badge">Omnichannel Expert</div>
+                </div>
+
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Technical Problem-Solving</h3>
+                    <p>Skilled in troubleshooting complex technical issues and providing clear solutions</p>
+                    <div class="competency-badge">Technical Support</div>
+                </div>
+
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>CRM & Tools Mastery</h3>
+                    <p>Proficient in leveraging CRM systems and support tools for efficient service delivery</p>
+                    <div class="competency-badge">CRM Expert</div>
+                </div>
+
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Customer Onboarding</h3>
+                    <p>Experience in guiding new customers through setup and ensuring successful adoption</p>
+                    <div class="competency-badge">Onboarding Specialist</div>
+                </div>
+
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Training & Mentoring</h3>
+                    <p>Proven track record in onboarding and mentoring new team members for success</p>
+                    <div class="competency-badge">Team Development</div>
+                </div>
+
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data-Driven Insights</h3>
+                    <p>Using analytics and metrics to improve workflows and enhance customer satisfaction</p>
+                    <div class="competency-badge">Analytics</div>
+                </div>
+
+                <div class="competency-card reveal">
+                    <div class="competency-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Process Improvement</h3>
+                    <p>Continuously identifying and implementing service process enhancements</p>
+                    <div class="competency-badge">Innovation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="projects reveal" id="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Coffee Shop Website</h3>
+                <p>Responsive UI with modern layout and smooth animations for better user experience.</p>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Personal brand website with dynamic effects and creative design elements.</p>
+            </div>
+            <div class="project-card">
+                <h3>Landing Page</h3>
+                <p>High-conversion landing page with smooth UX and eye-catching visuals.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">
+                    I'm always open to discussing new opportunities and collaborations. Feel free to reach out!
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Left column: contact cards -->
+                <div class="contact-methods">
+                    <a href="mailto:adriand.alasco@outlook.com" class="contact-method-card">
+                        <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email Me</h3>
+                        <p>adriand.alasco@outlook.com</p>
+                        <span class="method-cta">Send Email <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="tel:+639634570219" class="contact-method-card">
+                        <div class="method-icon"><i class="fas fa-phone"></i></div>
+                        <h3>Call Me</h3>
+                        <p>+63 963 457 0219</p>
+                        <span class="method-cta">Make Call <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="https://linkedin.com/in/adrian-alasco" target="_blank" class="contact-method-card">
+                        <div class="method-icon"><i class="fab fa-linkedin"></i></div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect professionally</p>
+                        <span class="method-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+
+                <!-- Right column: profile image -->
+                <div class="contact-image">
+                    <img src="profile.png" alt="Profile Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ender reveal" id="ender">
+        <h2>Let's Grow Together</h2>
+        <p>
+            I help businesses grow by combining strong technical skills with customer-focused support.
+            I provide focused technical and customer support for SaaS and eCommerce platforms, including Windows and
+            Apple operating systems, as well as hands-on hardware and software troubleshooting. From resolving platform,
+            system, and application issues to assisting users through live chat and email, I ensure problems are
+            diagnosed accurately and resolved efficiently. I value clear communication, consistency, and practical
+            solutions that help users stay productive and confident in the tools they rely on.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Adrian D. Alasco. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Preloader JS -->
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }, 2000);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
