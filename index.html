@@ -14,15 +14,10 @@
 
 <body>
     <div id="preloader">
-        <div class="loader-content">
-            <img src="Logo.png" alt="Logo" class="preloader-logo">
-            <span class="preloader-text">Welcome!</span>
-        </div>
+        <img src="Logo.png" alt="Adrian Logo" class="preloader-logo">
     </div>
 
-    <!-- Preload sound -->
-    <audio id="preload-sound" src="sound.mp3" preload="auto"></audio>
-    </div>
+
 
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
@@ -33,15 +28,16 @@
     <header id="header">
         <nav class="navbar">
             <div class="logo">
-                <img src="Logo.png" alt="Adrian_A Logo" class="logo-img">
-                Adrian_A
+                <img src="Logo.svg" alt="Adrian_A Logo" class="logo-img">
             </div>
+
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#competencies">Competencies</a></li>
+                <li><a href="#competencies">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+
             </ul>
 
             <div class="menu-toggle" id="menuToggle">
@@ -70,7 +66,8 @@
 
             <div class="hero-actions">
                 <a href="#projects" class="btn primary">Download CV</a>
-                <a href="#contact" class="btn ghost">Follow</a>
+                <a href="#contact" class="btn ghost">Hire Me</a>
+                <a href="#contact" class="btn ghost"></a>
             </div>
 
             <div class="socials">
@@ -105,18 +102,38 @@
         </div>
     </section>
 
-    <section class="about reveal" id="about">
-        <h2>About Me</h2>
-        <p>
-            Detail-oriented and empathetic Customer Support Specialist with 8+ years of experience delivering top-tier
-            support via chat, voice, and email. Proven success in fast-paced environments, excelling at CRM usage, issue
-            resolution, onboarding, and mentoring.
-        </p>
-        <p>
-            Adept at using data insights to improve workflows and customer satisfaction. Passionate about creating
-            exceptional customer experiences and continuously improving service processes.
-        </p>
+    <!-- Intro Vieo Section -->
+    <section id="about" class="about reveal">
+        <div class="about-content-wrapper">
+            <!-- Left: text -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Detail-oriented and empathetic Customer Support Specialist with 8+ years of experience delivering
+                    top-tier
+                    support via chat, voice, and email. Proven success in fast-paced environments, excelling at CRM
+                    usage, issue
+                    resolution, onboarding, and mentoring.
+                </p>
+                <p>
+                    Adept at using data insights to improve workflows and customer satisfaction. Passionate about
+                    creating
+                    exceptional customer experiences and continuously improving service processes.
+                </p>
+                <a href="#learn-more" class="btn learn-more">Learn More</a>
+            </div>
+
+            <!-- Right: video -->
+            <div class="intro-video">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline controls poster="video-poster.jpg">
+                        <source src="intro.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
     </section>
+
+
 
     <!-- Core Competencies Section -->
     <section id="competencies" class="competencies reveal">
@@ -205,26 +222,6 @@
     </section>
 
 
-    <section class="projects reveal" id="projects">
-        <h2>Featured Projects</h2>
-
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Coffee Shop Website</h3>
-                <p>Responsive UI with modern layout and smooth animations for better user experience.</p>
-            </div>
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>Personal brand website with dynamic effects and creative design elements.</p>
-            </div>
-            <div class="project-card">
-                <h3>Landing Page</h3>
-                <p>High-conversion landing page with smooth UX and eye-catching visuals.</p>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -264,7 +261,7 @@
 
                 <!-- Right column: profile image -->
                 <div class="contact-image">
-                    <img src="Profile.png" alt="Profile Image">
+                    <img src="profile.png" alt="Profile Image">
                 </div>
             </div>
         </div>
@@ -294,18 +291,29 @@
     <!-- Preloader JS -->
     <script>
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                const preloader = document.getElementById('preloader');
-                preloader.style.opacity = '0';
-                preloader.style.transition = 'opacity 0.5s ease';
-                setTimeout(() => preloader.style.display = 'none', 500);
-            }, 2000);
-        });
+            const preloader = document.getElementById('preloader');
+            const minDisplay = 1000; // minimum 1 second
 
+            // record when preloader first appears
+            const start = Date.now();
+
+            const hidePreloader = () => {
+                const elapsed = Date.now() - start;
+                const remaining = Math.max(minDisplay - elapsed, 0);
+
+                setTimeout(() => {
+                    preloader.classList.add('fade-out');
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 500); // fade-out duration
+                }, remaining);
+            };
+
+            hidePreloader();
+        });
     </script>
 
 
 </body>
-
 
 </html>
