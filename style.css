@@ -285,7 +285,7 @@ header.scrolled {
     margin: 0 auto;
     padding: 10rem 3rem 6rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 6rem;
     position: relative;
@@ -376,6 +376,7 @@ header.scrolled {
     letter-spacing: -0.01em;
 }
 
+
 .btn::before {
     content: '';
     position: absolute;
@@ -402,6 +403,40 @@ header.scrolled {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
 }
+
+/* ANIMATED BORDER */
+.btn.primary::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: conic-gradient(from 0deg,
+            transparent 0deg,
+            #ffffff 90deg,
+            transparent 180deg,
+            #ffffff 270deg,
+            transparent 360deg);
+    animation: border-spin 3s linear infinite;
+    z-index: -1;
+}
+
+/* INNER MASK so only border shows */
+.btn.primary::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #040116;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* ANIMATION */
+@keyframes border-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .ghost {
     border: 2px solid var(--border);
@@ -459,23 +494,31 @@ header.scrolled {
 .hero-img {
     position: relative;
     flex-shrink: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-wrapper {
     position: relative;
     width: 450px;
     height: 450px;
+    margin: 0 auto;
 }
 
 .hero-img img {
     width: 100%;
     height: 100%;
-    border-radius: 24px;
+    border-radius: 0;
     object-fit: cover;
-    border: 1px solid var(--border);
-    position: relative;
-    z-index: 2;
-    animation: imageFloat 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @keyframes imageFloat {
@@ -491,20 +534,7 @@ header.scrolled {
 }
 
 .image-glow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0.3;
-    filter: blur(40px);
-    background: linear-gradient(270deg, #3b82f6, #8b5cf6, #60a5fa, #8b5cf6, #3b82f6);
-    background-size: 800% 800%;
-    background-repeat: no-repeat;
-    /* ensures smooth animation */
-    animation: glowPulse 4s ease-in-out infinite, glowColorFlow 15s linear infinite;
+    display: none;
 }
 
 @keyframes glowColorFlow {
@@ -556,15 +586,7 @@ header.scrolled {
 }
 
 .image-border {
-    position: absolute;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    border-radius: 24px;
-    top: -1px;
-    left: -1px;
-    z-index: 0;
-    background: linear-gradient(135deg, var(--accent), #510bf3);
-    animation: borderRotate 8s linear infinite;
+    dispplay: none;
 }
 
 @keyframes borderRotate {
@@ -1008,14 +1030,17 @@ footer {
     }
 
     .image-wrapper {
-        width: 400px;
-        height: 400px;
-    }
+        position: relative;
+        width: 700px;
+        height: 700px;
 
-    .hero-text h1 {
-        font-size: 3.75rem;
     }
 }
+
+.hero-text h1 {
+    font-size: 3.75rem;
+}
+
 
 @media (max-width: 1024px) {
     .hero {
@@ -1214,6 +1239,7 @@ footer {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.25s ease;
+    margin-top: 2rem;
 }
 
 .btn.learn-more:hover {
